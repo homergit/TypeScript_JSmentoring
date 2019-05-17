@@ -12,6 +12,6 @@ export class Office<A, B> {
     }
 
     addEmployee(id: A, value: B): void {
-        this.office.push({ id, value });
+        this.office.push({id, value});
     }
 }

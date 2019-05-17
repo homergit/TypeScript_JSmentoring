@@ -1,6 +1,6 @@
-import { Person } from '../models/persone/Persone.class';
-import { Office } from './generic-construction';
-import { PersonModel } from './persone.model';
+import {Person} from '../models/persone/Person.class';
+import {Office} from './generic-construction';
+import {PersonModel} from '../models/persone/person.model';
 
 const openSpace = new Office<number, Person>();
 const vasya = new Person(1, 'Vasya', 23, 'story');
@@ -17,20 +17,21 @@ console.log(openSpace.getEmployee(1));
 console.log(openSpace.getEmployee(3));
 
 
-  fetch('https://api.github.com/users/homergit/repos').then(
+fetch('https://api.github.com/users/homergit/repos').then(
     resp => resp.json()
-  ).then(repos => {
+).then(repos => {
     for (const repo of repos) {
-      console.log(repo.name);
+        console.log(repo.name);
     }
 
-    personModel.addPersone(
+    personModel.addPerson(
+        // @ts-ignore
         {'personalData': {'firstName': 'vasya', 'age': 23, 'secondName': 'qwerty'}, 'id': 1, 'salary': 100}
-        );
+    );
     personModel.getPersonalData();
     personModel.getSelary();
     personModel.setSelary(200);
     personModel.getSelary();
-  }).catch(ex => {
+}).catch(ex => {
     console.error(ex);
-  });
+});

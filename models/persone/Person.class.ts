@@ -1,5 +1,5 @@
-import { Human } from '../human/Human.class';
-import { HumanDTO } from '../human/human.interface';
+import {Human} from '../human/Human.class';
+import {HumanDTO} from '../human/human.interface';
 
 export class Person extends Human implements HumanDTO {
 
